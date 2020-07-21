@@ -171,33 +171,6 @@ output "myos_ip" {
 }
 
 
-// Copy Format Attach
-
-resource "null_resource" "null_att"  {
-
-depends_on = [
-    aws_efs_mount_target.alpha ,
-  ]
-
-
-  connection {
-    type     = "ssh"
-    user     = "ec2-user"
-    private_key = file("D:/eks.pem")
-    host     = aws_instance.web.public_ip
-  }
-
- provisioner "remote-exec" {
-    inline = [
-      "sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport ${aws_efs_file_system.foo.id}.efs.ap-south-1.amazonaws.com:/ /var/www/html/",
-      "sudo su -c \"echo '${aws_efs_file_system.foo.id}.efs.ap-south-1.amazonaws.com:/ nfs4 defaults,vers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport 0 0' >> /etc/fstab\"" ,
-      "sudo rm -rf /var/www/html/*",
-      "sudo git clone https://github.com/FateDaeth/aws_terraform_web.git /var/www/html/"
-     ]
-  }
-
-}
-
 
 
 

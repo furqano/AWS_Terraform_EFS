@@ -2,7 +2,7 @@
 
 #### Goal is to launch a webserver by using Terraform but here we will be using EFS as a persistent storage .
 
-<b>Persistent Storage<b> — Persistent storage means that the storage resource outlives any other resource and is always available, regardless of the state of a running instance.
+<b> Persistent Storage <b> — Persistent storage means that the storage resource outlives any other resource and is always available, regardless of the state of a running instance.
   
 ##### Why use EFS as a persistent storage ?
 

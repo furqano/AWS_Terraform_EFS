@@ -120,7 +120,23 @@ resource "aws_instance" "web" {
 
 }
 
-
+resource "null_resource" "null-remote-1"  {
+   depends_on = [aws_efs_mount_target.alpha,]
+	connection {
+		type     = "ssh"
+		user     = "ec2-user"
+		private_key = ("D:/eks.pem")
+		host     = aws_instance.web.public_ip
+}
+// ATTACH EFS 
+provisioner "remote-exec" {
+	inline = [
+		"sudo echo ${aws_efs_file_system.foo.dns_name}:/var/www/html efs defaults,_netdev 0 0 >> sudo /etc/fstab",
+		"sudo mount  ${aws_efs_file_system.foo.dns_name}:/  /var/www/html",
+		"sudo curl https://github.com/FateDaeth/aws_terraform_web.git > index.html",                                  
+		"sudo cp index.html  /var/www/html/",]
+}
+}
 
 
 // Creating s3 Bucket

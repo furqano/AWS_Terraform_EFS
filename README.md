@@ -2,6 +2,10 @@
 
 #### Goal is to launch a webserver by using Terraform but here we will be using EFS as a persistent storage .
 
+#### [Lets go to Quora](https://medium.com/@mohamedfurqan.o/aws-terraform-launching-webserver-on-aws-using-terraform-efs-elastic-file-system-4d45c093f8a8?source=friends_link&sk=785772a7168f279c88c5b4e21cce8e89)
+
+
+
 <b> Persistent Storage <b> — Persistent storage means that the storage resource outlives any other resource and is always available, regardless of the state of a running instance.
   
 ##### Why use EFS as a persistent storage ?

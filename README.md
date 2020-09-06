@@ -2,7 +2,7 @@
 
 #### Goal is to launch a webserver by using Terraform but here we will be using EFS as a persistent storage .
 
-#### [Lets go to Quora](https://medium.com/@mohamedfurqan.o/aws-terraform-launching-webserver-on-aws-using-terraform-efs-elastic-file-system-4d45c093f8a8?source=friends_link&sk=785772a7168f279c88c5b4e21cce8e89)
+#### [Lets go to Working Example](https://medium.com/@mohamedfurqan.o/aws-terraform-launching-webserver-on-aws-using-terraform-efs-elastic-file-system-4d45c093f8a8?source=friends_link&sk=785772a7168f279c88c5b4e21cce8e89)
 
 
 

@@ -1,4 +1,4 @@
-# aws_terraform_efs
+# Configuring AWS EFS Service using Terraform
 
 #### Goal is to launch a webserver by using Terraform but here we will be using EFS as a persistent storage .
 
